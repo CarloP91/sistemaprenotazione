@@ -15,5 +15,7 @@
     <input type="submit" value="PRENOTA" />
 </form>
 
+
+<div style="text-align: right;"><a href="#" onclick="history.go(-1);return true;">< indietro</a></div>
 </body>
 </html>
