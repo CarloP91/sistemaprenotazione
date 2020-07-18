@@ -12,7 +12,7 @@ $visual= "ASC";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+  die("Connection failed: " . mysqli_connect_error());
 }
 
 $sql = "SELECT * FROM `assegnazioneposti` WHERE stato = 'SELEZIONATO'";
@@ -21,30 +21,30 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result)) { 
+  while($row = mysqli_fetch_assoc($result)) { 
 
-$array1 = array_merge($array1, array_map('trim', explode(",", $row['id'])));
-
-
-
-          $id = $row["id"];
-
-				  echo '<span style="border: solid 1px"> BIGLIETTO: ' ."<strong>Posto:</strong> " .$row["posto"] ." <strong>Nome:</strong> " .$row["nome"] ." <strong>Cognome:</strong> " .$row["cognome"] ." <strong>Prezzo:</strong> " .$row["prezzo"] ." €" .'</span>'; 
-          ?>
+    $array1 = array_merge($array1, array_map('trim', explode(",", $row['id'])));
 
 
 
+    $id = $row["id"];
 
-      			
-<br>
+    echo '<span style="border: solid 1px"> BIGLIETTO: ' ."<strong>Posto:</strong> " .$row["posto"] ." <strong>Nome:</strong> " .$row["nome"] ." <strong>Cognome:</strong> " .$row["cognome"] ." <strong>Prezzo:</strong> " .$row["prezzo"] ." €" .'</span>'; 
+    ?>
 
 
 
-<?php 
 
-    }
+    
+    <br>
+
+
+
+    <?php 
+
+  }
 } else {
-    echo "0 results";
+  echo "0 results";
 }
 
 mysqli_close($conn);
@@ -53,9 +53,9 @@ mysqli_close($conn);
 
 <hr>
 
-  <?php  
+<?php  
 
-  return $array1;
+return $array1;
 
 // foreach ($array1 as $value) {
 //   echo " " .$value;
