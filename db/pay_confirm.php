@@ -4,9 +4,8 @@ $username = "root";
 $password = "";
 $dbname = "testcinema";
 
+$array1 = include 'select_verifica.php';
 
-//$id = $_POST['id'];
-$id = include 'select_verifica.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,16 +14,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE `testcinema`.`assegnazioneposti` SET `stato` = 'PRENOTATO' WHERE (`id` = '$id');";
+
+foreach ($array1 as $value) {
+
+  $sql = "UPDATE `testcinema`.`assegnazioneposti` SET `stato` = 'PRENOTATO' WHERE (`id` = '$value');";
+
+ 
+
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
- // header( "refresh:0;url=../index.php" );
-   	header("Location: ../sala1.php");
+    echo "Pagamento andato a buon fine";
+  header( "refresh:5;url=../sala1.php" );
+ // header("Location: ../sala1.php");
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+}
 $conn->close();
 ?>

@@ -32,7 +32,7 @@ $array1 = array_merge($array1, array_map('trim', explode(",", $row['id'])));
 				  echo '<span style="border: solid 1px"> BIGLIETTO: ' ."<strong>Posto:</strong> " .$row["posto"] ." <strong>Nome:</strong> " .$row["nome"] ." <strong>Cognome:</strong> " .$row["cognome"] ." <strong>Prezzo:</strong> " .$row["prezzo"] ." €" .'</span>'; 
           ?>
 
-         <input type="text" name="id" value="<?php echo $id ?>">     		
+
 
 
       			
@@ -53,6 +53,12 @@ mysqli_close($conn);
 
 <hr>
 
-<?php print_r($array1) 
+  <?php  
+
+  return $array1;
+
+// foreach ($array1 as $value) {
+//   echo " " .$value;
+// }
 
 ?>

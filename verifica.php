@@ -12,7 +12,6 @@
 
 
 
-
 	<form method="post" action="db/pay_confirm.php">
 		<?php $array1 = include 'db/select_verifica.php'; ?>
 
@@ -23,6 +22,7 @@
 		<input type="submit" name="invia" value="Paga ORA">
 	</form>
 
-	
+
+
 </body>
 </html>
