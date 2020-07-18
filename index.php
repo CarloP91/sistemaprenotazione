@@ -9,7 +9,7 @@
 
 	<br><br>
 
-	<a href="sala1.php">LOCANDINA 1</a> - <a href="sala1.php">LOCANDINA 2</a>
+	<a href="sala.php">LOCANDINA 1</a> - <a href="sala.php">LOCANDINA 2</a>
 
 </body>
 </html>

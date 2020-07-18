@@ -23,8 +23,8 @@ foreach ($array1 as $value) {
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Pagamento andato a buon fine";
-  header( "refresh:5;url=../sala1.php" );
+    
+  header( "refresh:5;url=../sala.php" );
  // header("Location: ../sala1.php");
 
 } else {
@@ -32,4 +32,6 @@ if ($conn->query($sql) === TRUE) {
 }
 }
 $conn->close();
+
+echo "Pagamento andato a buon fine";
 ?>
