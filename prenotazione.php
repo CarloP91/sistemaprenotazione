@@ -27,5 +27,7 @@
   <form action="verifica.php">
     <input type="submit" value="CONFERMA" />
   </form>
+
+  <a href="index.php">HOMEPAGE</a>
   
   </html>
