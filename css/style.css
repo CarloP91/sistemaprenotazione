@@ -1,0 +1,33 @@
+.a_btn_del {
+    background-color:#f2f2f2;
+    border: solid 1px black;
+    color: black;     
+    font-size: 15px; 
+    text-decoration: none;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.a_btn_del:hover {
+    background-color: red;
+    border: solid 2px;
+  }
+
+  .a_btn_book {
+    background-color:#f2f2f2;
+    border: solid 1px black;
+    color: black;     
+    font-size: 15px; 
+    text-decoration: none;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.a_btn_book:hover {
+    background-color: greenyellow;
+    border: solid 2px;
+  }

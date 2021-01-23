@@ -11,5 +11,7 @@
 
 	<a href="sala.php">LOCANDINA 1</a> - <a href="sala.php">LOCANDINA 2</a>
 
+	<button onclick="window.location.href='admin_access/gest_posti.php';">ADMIN</button>
+
 </body>
 </html>
